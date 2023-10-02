@@ -22,6 +22,7 @@
 
 //------------------------------------------------------------------------
 // rendering components
+import ConditionalList from "./conditionals";
 
 export default function Fruits() {
   const fruits = ["apple", "mango", "banana", "grapes"];
@@ -30,6 +31,7 @@ export default function Fruits() {
     <>
       <h1>Fruits :</h1>
       <List fruits={fruits} />
+      <ConditionalList fruits={fruits} />
     </>
   );
 }
@@ -37,9 +39,18 @@ export default function Fruits() {
 function List(props) {
   return (
     <ul>
+      {/* using ternary operator
+       
       {props.fruits.map((fruits) => {
-        return <li key={fruits}>{fruits}</li>;
-      })}
+        return fruits.startsWith("g") ? <li key={fruits}>{fruits}</li> : null;
+      })} */}
+
+      {
+        // && operator
+        props.fruits.map((fruits) => {
+          return fruits.startsWith("g") && <li key={fruits}>{fruits}</li>;
+        })
+      }
     </ul>
   );
 }
