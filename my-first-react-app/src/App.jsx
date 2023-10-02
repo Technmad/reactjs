@@ -3,9 +3,8 @@ import GreetUser from "./greetings";
 function App() {
   return (
     <>
-      <h1>
-        Hello! <GreetUser />
-      </h1>
+      <h1>Hello!</h1>
+      <GreetUser />
     </>
   );
 }
