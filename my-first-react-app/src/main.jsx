@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import Fruits from "./rendering.jsx";
+import TodoList from "./todo.jsx";
 // import Greeting from "./greet.jsx";
 // import GetList from "./list.jsx";
 // import Bio from "./bio.jsx";
@@ -19,5 +20,6 @@ root.render(
     {/* <Avatar /> */}
     {/* <HeroList /> */}
     <Fruits />
+    <TodoList />
   </React.StrictMode>
 );
