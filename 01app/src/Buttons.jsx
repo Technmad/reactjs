@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 function ButtonList(props) {
   const buttonStyle = {
     color: props.color,
