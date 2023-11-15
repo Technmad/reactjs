@@ -1,5 +1,6 @@
 import Name from "./Name";
 import Items from "./Items";
+import List from "./List";
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <h1>Namaste React!</h1>
       <Name />
       <Items />
+      <List />
     </>
   );
 }
