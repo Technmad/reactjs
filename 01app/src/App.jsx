@@ -1,6 +1,7 @@
 import Name from "./Name";
 import Items from "./Items";
 import List from "./List";
+import Buttons from "./Buttons";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Name />
       <Items />
       <List />
+      <Buttons />
     </>
   );
 }
