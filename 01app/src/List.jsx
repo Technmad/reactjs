@@ -1,6 +1,12 @@
 /* eslint-disable react/prop-types */
 function ListItems(props) {
-  return <li>{props.animal}</li>;
+  return (
+    <ul>
+      {props.animal.map((animal) => {
+        return animal.startsWith("L") ? <li key={animal}>{animal}</li> : null;
+      })}
+    </ul>
+  );
 }
 
 const List = () => {
@@ -9,11 +15,7 @@ const List = () => {
   return (
     <div>
       <h1>Animals: </h1>
-      <ul>
-        {animal.map((animal) => {
-          return <ListItems key={animal} animal={animal} />;
-        })}
-      </ul>
+      <ListItems animal={animal} />
     </div>
   );
 };
