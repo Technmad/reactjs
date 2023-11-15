@@ -26,7 +26,7 @@ function ListItems(props) {
           })}
         </ul>
       )}
-      {props.animal && props.animals.length === 0 && (
+      {props.animal && props.animal.length === 0 && (
         <div>There are no animals in the list!</div>
       )}
     </>
