@@ -1,21 +1,35 @@
 /* eslint-disable react/prop-types */
 function ListItems(props) {
-  if (!props.animal) {
-    return <div>Loading...</div>;
-  }
+  //   if (!props.animal) {
+  //     return <div>Loading...</div>;
+  //   }
+  //   if (props.animal.length === 0) {
+  //     return <div>There are no animals in the list!</div>;
+  //   }
+  //   return (
+  //     <ul>
+  //       {props.animal.map((animal) => {
+  //         return <li key={animal}>{animal}</li>;
+  //       })}
+  //     </ul>
+  //   );
 
-  if (props.animal.length === 0) {
-    return <div>There are no animals in the list!</div>;
-  }
+  //   ------------------------------------
 
   return (
-    <ul>
-      {props.animal.map((animal) => {
-        // return animal.startsWith("L") ? <li key={animal}>{animal}</li> : null;
-        // using && operator
-        return animal.startsWith("L") && <li key={animal}>{animal}</li>;
-      })}
-    </ul>
+    <>
+      {!props.animal && <div> loading...</div>}
+      {props.animal && props.animal.length > 0 && (
+        <ul>
+          {props.animal.map((animal) => {
+            return <li key={animal}>{animal}</li>;
+          })}
+        </ul>
+      )}
+      {props.animal && props.animals.length === 0 && (
+        <div>There are no animals in the list!</div>
+      )}
+    </>
   );
 }
 
