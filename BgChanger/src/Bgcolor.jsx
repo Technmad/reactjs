@@ -17,3 +17,5 @@ function Bgcolor() {
     </>
   );
 }
+
+export default Bgcolor;
