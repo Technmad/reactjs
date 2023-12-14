@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-function ButtonList({ text, color, fontSize }) {
+function ButtonList({ text = "Click Me!", color = "blue", fontSize = 12 }) {
   const buttonStyle = {
     color: color,
     fontSize: fontSize + "px",
