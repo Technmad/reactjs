@@ -1,11 +1,11 @@
 /* eslint-disable react/prop-types */
-function ButtonList(props) {
+function ButtonList({ text, color, fontSize }) {
   const buttonStyle = {
-    color: props.color,
-    fontSize: props.fontSize + "px",
+    color: color,
+    fontSize: fontSize + "px",
   };
 
-  return <button style={buttonStyle}>{props.text}</button>;
+  return <button style={buttonStyle}>{text}</button>;
 }
 
 const Buttons = () => {
